@@ -1,6 +1,5 @@
 {
   "parserOptions": {
-    // Required for certain syntax usages
     "ecmaVersion": 6
   },
   "plugins": [
@@ -20,7 +19,7 @@
     "prefer-const": "error",
     "no-var": "error",
     "no-tabs": "error",
-    
+
     "no-console": "off",
 
     "no-regex-spaces": "off",

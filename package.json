@@ -1,5 +1,5 @@
 {
-  "name": "vocabulary.trainer",
+  "name": "vocabulary.training",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,7 @@
     "firebase": "^4.12.1",
     "history": "^4.7.2",
     "immutability-helper": "^2.6.6",
-    "jquery": "^1.9.1",
+    "jquery": "^3.0.0",
     "moment": "^2.22.0",
     "popper.js": "^1.12.9",
     "prop-types": "^15.6.1",
