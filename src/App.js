@@ -1,21 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import MyLoadable from './components/loader/myloadable';
+import Popup from './components/global/popup';
+import { Route } from 'react-router-dom';
+import MainHeader from './components/global/mainheader';
+import PropTypes from 'prop-types';
+
+const MainScreen = MyLoadable({
+  loader: () => import('./screens/mainscreen'),
+});
+
+const AccountScreen = MyLoadable({
+  loader: () => import('./screens/mainscreen'),
+});
+
+const WordScreen = MyLoadable({
+  loader: () => import('./screens/mainscreen'),
+});
+
+const CloudScreen = MyLoadable({
+  loader: () => import('./screens/mainscreen'),
+});
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Vocabulary Trainer</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <div className="App h-100 w-100">
+        <div>
+          <MainHeader />
+          <Route exact path="/" component={MainScreen} />
+          <Route exact path="/account/*" component={AccountScreen} />
+          <Route exact path="/mywords/*" component={WordScreen} />
+          <Route exact path="/cloud/*" component={CloudScreen} />
+        </div>
+        <Popup />
+      </div>);
   }
 }
 
-export default App;
+App.propTypes = {
+
+};
+
+
+export default connect(null, null)(App);
