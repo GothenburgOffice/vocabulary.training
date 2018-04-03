@@ -8,6 +8,13 @@ import rootReducer from '../modules';
 export const history = createHistory();
 
 const initialState = {
+  authState: {
+    signin: false,
+    user: {
+      uid: null,
+      displayName: null
+    },
+  },
   popup: {
     message: '',
     isVisible: false,

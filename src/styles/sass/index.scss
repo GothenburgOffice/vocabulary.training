@@ -26,32 +26,37 @@ body > #root > div {
 }
 
 .flag-icon-custom {
-  border-radius: 4px;
-  margin: 3px;
-  padding-top: 1px;
+  margin: 2px;
   overflow: hidden;
 }
 
 .MainNav {
-  font-size: 2em;
-  color: rgb(232,232,232);
-  padding: 6px 12px;
+  font-size: 1.8em;
+  color: rgb(222,222,222);
+  padding: 3px 11px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
 
 
   .MainNavHeader {
     float: left;
-    font-size: 163%;
+    font-size: 155%;
     font-family: $logo-font-stack;
-    font-style: italic;
   }
   
   .MainNavList {
     list-style: none;
     display: flex;
     margin: 2px;
+    padding: 0;
+
 
     
     .MainNavItem {
@@ -62,14 +67,16 @@ body > #root > div {
       .NavItemText {
         padding: 0px 2px;
         margin: 0px 2px;
-        margin-top: -5px;
-        font-size: .28em;
+        margin-top: -6px;
+        font-size: .265em;
       }
     }
 
     
   }
 }
+
+
 
 /* loading dots 
   https://codepen.io/vkjgr/pen/gbPaVx
@@ -104,3 +111,40 @@ body > #root > div {
       .5em 0 0 $primary-blue;
     }
   }
+
+
+@media only screen and (max-width : 850px) {
+  .MainNav {
+    font-size: 1.4em;
+    padding: 2px 5px;
+    justify-content: center;
+    align-items: center;
+
+  
+    .MainNavHeader {
+      font-size: 135%;
+      margin: 2px auto !important;
+    }
+    
+    .MainNavList {
+      align-items: center;
+      justify-content: center;
+      margin: 2px auto !important;
+      
+      .MainNavItem {
+        padding: 0px 2px;
+        margin: 0px 3px;
+       
+  
+        .NavItemText {
+          padding: 0px 2px;
+          margin: 0px 2px;
+          margin-top: -5px;
+          font-size: .3em;
+        }
+      }
+  
+      
+    }
+  }
+}

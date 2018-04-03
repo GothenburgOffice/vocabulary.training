@@ -23,3 +23,8 @@ yarn-error.log*
 
 # styles
 /src/styles/css
+
+#config
+/src/config/firebase.js
+/src/config/config.js
+
