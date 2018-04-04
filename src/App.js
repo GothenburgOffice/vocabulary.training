@@ -56,7 +56,6 @@ class App extends Component {
     return (
       <div className="App h-100 w-100">
         <div>
-          <button onClick={this.signOut}>Sign off!</button>
           <MainHeader />
           <Route exact path="/" component={MainScreen} />
           <Route exact path="/account/*" component={AccountScreen} />
@@ -65,6 +64,7 @@ class App extends Component {
           <Route exact path="/terms.html" component={Privacy} />
         </div>
         <Popup />
+        <button onClick={this.signOut}>Sign off!</button>
       </div>);
   }
 }
