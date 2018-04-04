@@ -64,7 +64,6 @@ class App extends Component {
           <Route exact path="/terms.html" component={Privacy} />
         </div>
         <Popup />
-        <button onClick={this.signOut}>Sign off!</button>
       </div>);
   }
 }

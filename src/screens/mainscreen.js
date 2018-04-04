@@ -12,8 +12,10 @@ class MainScreen extends Component {
     return (
       <div className="MainScreen text-center">
         <FlagList />
-        <img src={Welcome} alt="Welcome to Vocabulary.Training" />
-        <LoginWidget />
+        <img src={Welcome} alt="Welcome to Vocabulary.Training" style={{maxWidth: '100%', maxHeight: '80%'}}/>
+        <div className="d-block d-md-none mt-5 pt-3">
+          <LoginWidget />
+        </div>
       </div>);
   }
 }
