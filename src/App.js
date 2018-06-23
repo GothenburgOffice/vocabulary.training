@@ -7,7 +7,7 @@ import { bindActionCreators }from 'redux';
 import MainHeader from './components/global/mainheader';
 import Privacy from './components/privacy';
 import firebase from './config/firebase';
-import {FirebaseAuthState} from './actions';
+import {FirebaseAuthState} from './actions'
 import PropTypes from 'prop-types';
 
 const MainScreen = MyLoadable({
